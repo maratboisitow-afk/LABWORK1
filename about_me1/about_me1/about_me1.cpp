@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <windows.h>
+using namespace std;
 
 /*
  * Программа: О себе
@@ -15,30 +16,30 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     // Заголовок
-    std::cout << "================================" << std::endl;
-    std::cout << "       Информация о студенте    " << std::endl;
-    std::cout << "================================" << std::endl;
+    cout << "================================" << endl;
+    cout << "       Информация о студенте    " << endl;
+    cout << "================================" << endl;
 
     // Личные данные
-    std::cout << std::endl;
-    std::cout << "Имя: Марат" << std::endl;
-    std::cout << "Группа: ИСПкр-252" << std::endl;
-    std::cout << "Возраст: 18" << std::endl;
+    cout << endl;
+    cout << "Имя: Марат" << endl;
+    cout << "Группа: ИСПкр-252" << endl;
+    cout << "Возраст: 18" << endl;
 
     // Увлечения
-    std::cout << std::endl;
-    std::cout << "Мои увлечения:" << std::endl;
-    std::cout << "  1. Студенческий актив" << std::endl;
-    std::cout << "  2. Работа вожатым в лагере" << std::endl;
-    std::cout << "  3. Волонтёрство" << std::endl;
+    cout << endl;
+    cout << "Мои увлечения:" << endl;
+    cout << "  1. Студенческий актив" << endl;
+    cout << "  2. Работа вожатым в лагере" << endl;
+    cout << "  3. Волонтёрство" << endl;
 
     // Мотивация
-    std::cout << std::endl;
-    std::cout << "Почему я изучаю программирование:" << std::endl;
-    std::cout << "Хочу работать в данном направлении" << std::endl;
+    cout << endl;
+    cout << "Почему я изучаю программирование:" << endl;
+    cout << "Хочу работать в данном направлении" << endl;
 
-    std::cout << std::endl;
-    std::cout << "================================" << std::endl;
+    cout << endl;
+    cout << "================================" << endl;
 
     return 0;
 }
