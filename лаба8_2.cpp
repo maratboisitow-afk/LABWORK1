@@ -7,35 +7,38 @@
 #include <windows.h>
 
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
-    srand(time(0));
-    int secret = rand() % 100 + 1;
-    int guess;
-    int attempts = 0;
+	srand(time(0));
+	int secret = rand() % 100 + 1;
+	int guess;
+	int attempts = 0;
 
-    std::cout << "=== УГАДАЙ ЧИСЛО ===" << std::endl;
-    std::cout << "Я загадал число от 1 до 100. Попробуй угадать!" << std::endl;
+	std::cout « "=== УГАДАЙ ЧИСЛО ===" « std::endl;
+	std::cout « "Я загадал число от 1 до 100. Попробуй угадать!" « std::endl;
 
-    while (true) {
-        std::cout << "Введите ваше предположение: ";
-        std::cin >> guess;
-        attempts++; // Увеличиваем счетчик попыток
+	// Код студента: цикл while или do-while
+	// Использовать break для выхода при угадывании
+	do {
+		std::cout « "\nВаша догадка: ";
+		std::cin » guess;
+		attempts++;
 
-        if (guess == secret) {
-            std::cout << "Поздравляю! Вы угадали число " << secret << " за " << attempts << " попыток." << std::endl;
-            break; // Выход из цикла при угадывании, как указано в задании
-        }
-        else if (guess < secret) {
-            std::cout << "Загаданное число больше." << std::endl;
-        }
-        else {
-            std::cout << "Загаданное число меньше." << std::endl;
-        }
-    }
+		if (guess < secret) {
+			std::cout « "Мое число больше!" « std::endl;
+		}
+		else if (guess > secret) {
+			std::cout « "Мое число меньше!" « std::endl;
+		}
+		else {
+			std::cout « "Поздравляю! Вы угадали за " «попытки « " попытки!" « std::endl;
+			break;
+		}
+	} while (true);
 
-    return 0;
+	return 0;
+}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
